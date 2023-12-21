@@ -48,4 +48,8 @@ ps -f -p 26359
 # 脚本激活conda环境
 eval "$(conda shell.bash hook)"
 conda activate chronile
+
+# 后台运行脚本
+nohup .sh &
+tail -fn 50 nohup.out
 ```
