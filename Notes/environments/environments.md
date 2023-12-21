@@ -29,4 +29,14 @@ Host github.com
 ```python
     os.environ["http_proxy"] = "http://127.0.0.1:7890"
     os.environ["https_proxy"] = "http://127.0.0.1:7890"
+
+eval "$(conda shell.bash hook)"
+conda activate chronile
+HF_ENDPOINT=https://hf-mirror.com python train.py +model=codet5
+```
+
+## pip国内镜像
+```
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+pip config set install.trusted-host mirrors.aliyun.com
 ```
