@@ -30,8 +30,6 @@ Host github.com
     os.environ["http_proxy"] = "http://127.0.0.1:7890"
     os.environ["https_proxy"] = "http://127.0.0.1:7890"
 
-eval "$(conda shell.bash hook)"
-conda activate chronile
 HF_ENDPOINT=https://hf-mirror.com python train.py +model=codet5
 ```
 
@@ -39,4 +37,15 @@ HF_ENDPOINT=https://hf-mirror.com python train.py +model=codet5
 ```
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip config set install.trusted-host mirrors.aliyun.com
+```
+
+## 查用Linux命令
+
+```
+# 查看进程占用
+ps -f -p 26359
+
+# 脚本激活conda环境
+eval "$(conda shell.bash hook)"
+conda activate chronile
 ```
