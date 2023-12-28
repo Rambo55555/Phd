@@ -51,5 +51,19 @@ conda activate chronile
 
 # 后台运行脚本
 nohup .sh &
+nohup X.sh >output.log 2>&1 & # 内置文件描述符0表示输入，1表示输出，2表示错误，这里的2>&1表示标准错误也输出标准输出中，如果是2>1表示输出到文件名为1的文件，而&1表示stdout
 tail -fn 50 nohup.out
+
+# 杀死进程
+ps aux | grep 'rambo'
+kill PID
+
+# 内存信息
+free -h
 ```
+
+# 终端命令行快捷键
+
+- 清除当前行：`ctrl + u`
+- 清除当前屏幕：`ctrl + l`
+
